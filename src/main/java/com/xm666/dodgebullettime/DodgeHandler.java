@@ -7,6 +7,7 @@ import com.alrex.parcool.config.ParCoolConfig;
 import com.xm666.timescalelib.handler.TimeScaleHandler;
 import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.world.entity.player.Player;
+import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
@@ -23,7 +24,7 @@ public class DodgeHandler {
         applyBulletTime(event.getPlayer());
     }
 
-    @SubscribeEvent
+    @SubscribeEvent(priority = EventPriority.HIGH)
     public static void onLivingIncomingDamage(LivingIncomingDamageEvent event) {
         if (!(event.getEntity() instanceof Player player)) return;
 
@@ -31,13 +32,15 @@ public class DodgeHandler {
         if (parkourability == null) return;
 
         var dodge = parkourability.get(Dodge.class);
-        if (!dodge.isDoing()
-                || !parkourability.getServerLimitation().get(ParCoolConfig.Server.Booleans.DodgeProvideInvulnerableFrame)
+        if (!parkourability.getServerLimitation().get(ParCoolConfig.Server.Booleans.DodgeProvideInvulnerableFrame)
                 || event.getSource().is(DamageTypeTags.BYPASSES_ARMOR))
             return;
 
         var dodgeInvulnerableDuration = Config.DODGE_INVULNERABLE_DURATION.get();
-        if (dodge.getDoingTick() > dodgeInvulnerableDuration) return;
+        if (dodge.isDoing()
+                ? dodge.getDoingTick() > dodgeInvulnerableDuration
+                : dodge.getTickFromLastStarted() == -1 || dodge.getNotDoingTick() + Dodge.MAX_TICK > dodgeInvulnerableDuration)
+            return;
 
         event.setCanceled(true);
 
