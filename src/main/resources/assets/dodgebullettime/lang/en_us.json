@@ -1,12 +1,17 @@
 {
-  "itemGroup.dodgebullettime": "Example Mod Tab",
-  "block.dodgebullettime.example_block": "Example Block",
-  "item.dodgebullettime.example_item": "Example Item",
   "dodgebullettime.configuration.title": "DodgeBulletTime Configs",
   "dodgebullettime.configuration.section.dodgebullettime.common.toml": "DodgeBulletTime Configs",
   "dodgebullettime.configuration.section.dodgebullettime.common.toml.title": "DodgeBulletTime Configs",
-  "dodgebullettime.configuration.items": "Item List",
-  "dodgebullettime.configuration.logDirtBlock": "Log Dirt Block",
-  "dodgebullettime.configuration.magicNumberIntroduction": "Magic Number Text",
-  "dodgebullettime.configuration.magicNumber": "Magic Number"
+  "dodgebullettime.configuration.dodge_bullet_time_always": "Dodge Bullet Time Always",
+  "dodgebullettime.configuration.dodge_bullet_time_always.tooltip": "Always gain bullet time on dodge, or only in dodging a attack",
+  "dodgebullettime.configuration.dodge_bullet_time_minor": "Dodge Bullet Time Minor",
+  "dodgebullettime.configuration.dodge_bullet_time_minor.tooltip": "Whether to use minor bullet time on dodge",
+  "dodgebullettime.configuration.dodge_bullet_time_scale": "Dodge Bullet Time Scale",
+  "dodgebullettime.configuration.dodge_bullet_time_scale.tooltip": "The bullet time scale dodge gains",
+  "dodgebullettime.configuration.dodge_bullet_time_duration": "Dodge Bullet Time Duration",
+  "dodgebullettime.configuration.dodge_bullet_time_duration.tooltip": "The bullet time duration dodge gains",
+  "dodgebullettime.configuration.dodge_bullet_time_transition": "Dodge Bullet Time Transition",
+  "dodgebullettime.configuration.dodge_bullet_time_transition.tooltip": "The bullet time transition dodge gains",
+  "dodgebullettime.configuration.dodge_invulnerable_duration": "Dodge Invulnerable Duration",
+  "dodgebullettime.configuration.dodge_invulnerable_duration.tooltip": "The invulnerable duration dodge gains"
 }

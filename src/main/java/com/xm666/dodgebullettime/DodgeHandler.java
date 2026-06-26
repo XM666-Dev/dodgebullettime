@@ -48,10 +48,10 @@ public class DodgeHandler {
     }
 
     private static void applyBulletTime(Player player) {
+        var dodgeBulletTimeMinor = Config.DODGE_BULLET_TIME_MINOR.get();
         var dodgeBulletTimeScale = Config.DODGE_BULLET_TIME_SCALE.get().floatValue();
         var dodgeBulletTimeDuration = Config.DODGE_BULLET_TIME_DURATION.get();
         var dodgeBulletTimeTransition = Config.DODGE_BULLET_TIME_TRANSITION.get();
-        var dodgeBulletTimeMinor = Config.DODGE_BULLET_TIME_MINOR.get();
         TimeScaleHandler.applyScale(dodgeBulletTimeMinor ? player : null, dodgeBulletTimeScale, dodgeBulletTimeDuration, dodgeBulletTimeTransition);
     }
 }
