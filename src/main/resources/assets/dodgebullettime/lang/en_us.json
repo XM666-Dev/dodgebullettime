@@ -1,0 +1,12 @@
+{
+  "itemGroup.dodgebullettime": "Example Mod Tab",
+  "block.dodgebullettime.example_block": "Example Block",
+  "item.dodgebullettime.example_item": "Example Item",
+  "dodgebullettime.configuration.title": "DodgeBulletTime Configs",
+  "dodgebullettime.configuration.section.dodgebullettime.common.toml": "DodgeBulletTime Configs",
+  "dodgebullettime.configuration.section.dodgebullettime.common.toml.title": "DodgeBulletTime Configs",
+  "dodgebullettime.configuration.items": "Item List",
+  "dodgebullettime.configuration.logDirtBlock": "Log Dirt Block",
+  "dodgebullettime.configuration.magicNumberIntroduction": "Magic Number Text",
+  "dodgebullettime.configuration.magicNumber": "Magic Number"
+}
